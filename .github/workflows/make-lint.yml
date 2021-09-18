@@ -1,10 +1,10 @@
 name: make-lint
 
-on:
-  push:
+on: push
+
 jobs:
   run-lint:
     runs-on: ubuntu-latest
     steps:
-      - name: make-lint
+      - name: 'make-lint'
         run: make lint
