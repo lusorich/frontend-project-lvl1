@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: make-lint
-        run: make link
+        run: make lint
