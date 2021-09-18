@@ -1,6 +1,6 @@
 name: make-lint
 
-on: push
+on: [ push ]
 
 jobs:
   run-lint:
