@@ -1,7 +1,7 @@
 name: make-lint
 
-on: [ push ]
-
+on:
+  push:
 jobs:
   run-lint:
     runs-on: ubuntu-latest
