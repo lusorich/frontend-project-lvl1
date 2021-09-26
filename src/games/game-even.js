@@ -15,27 +15,12 @@ const game = () => {
   const randomNumber = getRandomInt();
   console.log(`Question: ${randomNumber}`);
   const userAnswer = readlineSync.question('Your answer: ');
-  switch (userAnswer) {
-    case 'yes':
-      if (isEven(randomNumber)) {
-        increaseUserPoints();
-        console.log('Correct!');
-      } else {
-        return looseGame('even', userAnswer, 'no');
-      }
-      break;
-    case 'no': {
-      if (!isEven(randomNumber)) {
-        increaseUserPoints();
-        console.log('Correct!');
-      } else {
-        return looseGame('even', userAnswer, 'yes');
-      }
-      break;
-    }
-    default:
-      console.log('Not correct answer');
-      return looseGame('even', userAnswer);
+  const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
+  if (correctAnswer === userAnswer) {
+    increaseUserPoints();
+    console.log('Correct!');
+  } else {
+    return looseGame('even', userAnswer, correctAnswer);
   }
   if (getUserPoints() === 3) {
     return winGame();
