@@ -32,23 +32,13 @@ export const repeatGame = (game) => {
     game();
   }
 };
-const endEvenGameText = (wrongAnswer, correctAnswer) => {
+const endGameText = (wrongAnswer, correctAnswer) => {
   console.log(
     `'${wrongAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${getUserName()}!`,
   );
 };
-const endCalcGameText = (wrongAnswer, correctAnswer) => {
-  console.log(
-    `'${wrongAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${getUserName()}!`,
-  );
-};
-export const looseGame = (gameType, wrongAnswer, correctAnswer) => {
-  if (gameType === 'even') {
-    endEvenGameText(wrongAnswer, correctAnswer);
-  }
-  if (gameType === 'calc') {
-    endCalcGameText(wrongAnswer, correctAnswer);
-  }
+export const looseGame = (wrongAnswer, correctAnswer) => {
+  endGameText(wrongAnswer, correctAnswer);
   setIsGameEnd(true);
 };
 export const winGame = () => {

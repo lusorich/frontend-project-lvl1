@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import {
   getRandomInt, gameStart, looseGame,
@@ -39,7 +38,7 @@ const game = () => {
     increaseUserPoints();
     console.log('Correct!');
   } else {
-    return looseGame('calc', userAnswer, correctAnswer);
+    return looseGame(userAnswer, correctAnswer);
   }
   if (getUserPoints() === 3) {
     return winGame();
