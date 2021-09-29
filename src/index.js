@@ -16,6 +16,7 @@ export const congratulationsTextForUser = () => console.log(`Congratulations, ${
  * @param {string} max - max value
  * @param {string} min - min value
  */
+// eslint-disable-next-line max-len
 export const getRandomInt = (max = 100, min = 1) => Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min)) + Math.ceil(min));
 export const isEven = (number) => number % 2 === 0;
 export const increaseUserPoints = () => { userGamePoints += 1; };
