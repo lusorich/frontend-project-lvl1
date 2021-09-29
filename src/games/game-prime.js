@@ -34,6 +34,6 @@ const game = () => {
   }
 };
 
-export const primeGame = () => {
+export default () => {
   repeatGame(game);
 };

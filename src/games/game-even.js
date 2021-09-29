@@ -26,6 +26,6 @@ const game = () => {
   }
 };
 
-export const evenOrNotGame = () => {
+export default () => {
   repeatGame(game);
 };

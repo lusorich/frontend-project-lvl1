@@ -50,6 +50,6 @@ const game = () => {
   }
 };
 
-export const gcdGame = () => {
+export default () => {
   repeatGame(game);
 };

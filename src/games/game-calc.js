@@ -45,6 +45,6 @@ const game = () => {
   }
 };
 
-export const calcGame = () => {
+export default () => {
   repeatGame(game);
 };

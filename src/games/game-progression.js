@@ -49,6 +49,6 @@ const game = () => {
   }
 };
 
-export const progressionGame = () => {
+export default () => {
   repeatGame(game);
 };
