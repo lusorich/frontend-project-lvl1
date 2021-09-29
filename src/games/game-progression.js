@@ -28,7 +28,7 @@ const progressionToOutput = (progression) => progression.join(' ');
 
 // eslint-disable-next-line consistent-return
 const game = () => {
-  const progressionLength = getRandomInt(20, 5);
+  const progressionLength = 10;
   const startNumber = getRandomInt();
   const randomIndex = getRandomInt(progressionLength, 0);
   const constantProgressionNumber = getRandomInt(10, 1);
