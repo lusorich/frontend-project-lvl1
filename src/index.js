@@ -11,7 +11,12 @@ export const setUserName = () => {
 export const getUserName = () => userName;
 export const helloTextForUser = () => console.log(`Hello, ${getUserName()}!`);
 export const congratulationsTextForUser = () => console.log(`Congratulations, ${getUserName()}!`);
-export const getRandomInt = (max = 100) => Math.round(Math.random() * max);
+/**
+ * Get random integer
+ * @param {string} max - max value
+ * @param {string} min - min value
+ */
+export const getRandomInt = (max = 100, min = 1) => Math.round(Math.random() * (max - min) + min);
 export const isEven = (number) => number % 2 === 0;
 export const increaseUserPoints = () => { userGamePoints += 1; };
 export const getUserPoints = () => userGamePoints;

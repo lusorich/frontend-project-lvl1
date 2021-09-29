@@ -9,7 +9,7 @@ const desc = 'Find the greatest common divisor of given numbers.';
 gameStart();
 console.log(desc);
 
-const calculateNodFor2Numbers = (first, second) => {
+const calculateGCDFor2Numbers = (first, second) => {
   let firstNumber = first;
   let secondNumber = second;
   if ((firstNumber > secondNumber) && firstNumber % secondNumber === 0) {
@@ -30,9 +30,7 @@ const calculateNodFor2Numbers = (first, second) => {
   return firstNumber + secondNumber;
 };
 
-const getGcd = (firstNumber, secondNumber) => {
-  return calculateNodFor2Numbers(firstNumber, secondNumber);
-};
+const getGcd = (firstNumber, secondNumber) => calculateGCDFor2Numbers(firstNumber, secondNumber);
 
 // eslint-disable-next-line consistent-return
 const game = () => {
